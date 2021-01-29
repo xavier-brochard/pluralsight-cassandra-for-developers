@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 services:
   n1:
     image: cassandra:3.11

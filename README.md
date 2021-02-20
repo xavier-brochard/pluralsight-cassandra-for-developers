@@ -124,7 +124,7 @@ Let's shutdown our one node in `DC2`. This will be equivalent to losing networki
 docker-compose stop n3;
 ```
 
-Return to `cqlsh`on `n1`, use the keyspace, and set the consistency level to èach_quorum`.
+Return to `cqlsh`on `n1`, use the keyspace, and set the consistency level to `each_quorum`.
 
 ```bash
 docker-compose exec n1 cqlsh;
@@ -138,9 +138,9 @@ This will require that we achieve a quorum in `DC1` and `DC2`. Which we expect t
 cqlsh:lordoftherings> insert into hobbits (id) values ('Sam');
 ```
 
-As expected, the quorum in `DC2` is not met, and the inster fails.
+As expected, the quorum in `DC2` is not met, and the insert fails.
 
-Now, let's chage the consistency level to `LOCAL_QUORUM`.
+Now, let's change the consistency level to `LOCAL_QUORUM`.
 
 ```bash
 cqlsh:lordoftherings> consistency local_quorum;
